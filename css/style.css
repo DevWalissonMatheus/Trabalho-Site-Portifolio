@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+body {
+  background: #16213E;
+}
+
 a {
   color: #fff;
   text-decoration: none;
@@ -14,19 +18,26 @@ a:hover {
   opacity: 0.7;
 }
 
-.logo {
-  font-size: 1.4em;
-  text-transform: uppercase;
-  letter-spacing: 4px;
+#top-container {
+  padding-top: 57px;
 }
 
-nav {
+#barra-tarefas {
   display: flex;
+  position: fixed;
   justify-content: space-around;
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   background: #23232E;
-  height: 8vh;
+  height: 10vh;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  pointer-events: none;
 }
 
 .nav-botoes {
@@ -62,10 +73,11 @@ nav {
     right: 0;
     width: 50vw;
     height: 92vh;
-    background: #23232e;
+    background: #23232E;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    opacity: 0.9;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
   }
@@ -106,26 +118,66 @@ nav {
 }
 /* Painel da Tela Principal */
 .home-painel {
-  background-color: #EAF6F6;
+  background-color: #162E4D;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
 }
 
 #home-name {
+  color: #BAD7E9;
   font-size: min(140px, 12vw);
-  font-family: 'MonteCarlo', cursive;
+  font-family: "MonteCarlo", cursive;
   font-weight: bold;
 }
 
 #home-slogan {
+  color: #BAD7E9;
   font-size: min(30px, 3vw);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
 
 .dev-icon {
+  color: #BAD7E9;
   width: 25%;
-  margin-top: 18px;
+  margin-top: 22px;
+}
+
+/* Meio da Pagina e um pequeno resumo sobre mim */
+#middle-container {
+  background-color: #16213E;
+  font-family: "Montserrat", sans-serif;
+}
+
+.perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-perfil {
+  width: 25%;
+  margin-top: 15px;
+}
+
+.img-habil {
+  width: 25%;
+  margin-top: 15px;
+}
+
+.titulo-perfil {
+  color: #BAD7E9;
+  font-size: max(22px, 5vw);
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.text-perfil {
+  color: #BACDDB;
+  font-size: min(30px, 4vw);
+  font-weight: bold;
+  margin: 10px 70px 10px 70px;
 }
