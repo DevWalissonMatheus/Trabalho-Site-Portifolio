@@ -1,25 +1,31 @@
-/* Barra de Tarefas */
+/* Geral */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: #16213E;
+  background: #232D3F;
 }
 
-a {
-  color: #fff;
+.flex {
+  display: flex;
+}
+
+/* Barra de Tarefas */
+li a {
+  color: #B4B4B3;
+  font-weight: bold;
   text-decoration: none;
   transition: 0.3s;
+  display: inline-block;
+  transition: .07s;
 }
 
-a:hover {
-  opacity: 0.7;
-}
-
-#top-container {
-  padding-top: 57px;
+li a:hover {
+  color: #fff;
+  transform: scale(1.15);
 }
 
 #barra-tarefas {
@@ -29,15 +35,13 @@ a:hover {
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   background: #23232E;
+  opacity: 0.9;
   height: 10vh;
   width: 100%;
 }
 
 .logo {
-  font-size: 1.4em;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  pointer-events: none;
+  height: 80%;
 }
 
 .nav-botoes {
@@ -116,68 +120,40 @@ a:hover {
 .menu-responsivo.active .linha3 {
   transform: rotate(45deg) translate(-5px, -7px);
 }
-/* Painel da Tela Principal */
-.home-painel {
-  background-color: #162E4D;
-  display: flex;
-  flex-direction: column;
+
+/* Topo do Site */
+#top-container {
+  padding: 70px 4% 0 4%;
+}
+
+#top-container .flex {
   align-items: center;
-  border-bottom-left-radius: 40%;
-  border-bottom-right-radius: 40%;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 50px;
 }
 
-#home-name {
+#perfil-frase {
   color: #BAD7E9;
-  font-size: min(140px, 12vw);
-  font-family: "MonteCarlo", cursive;
+  font-size: 56px;
+  font-family: 'Poppins', sans-serif;
   font-weight: bold;
+  line-height: 55px;
+  margin-bottom: 15px;
 }
 
-#home-slogan {
+#perfil-slogan {
   color: #BAD7E9;
-  font-size: min(30px, 3vw);
+  font-size: 30px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
 
-.dev-icon {
-  color: #BAD7E9;
-  width: 25%;
-  margin-top: 22px;
+.img-perfil {
+  width: 450px;
 }
 
 /* Meio da Pagina e um pequeno resumo sobre mim */
 #middle-container {
-  background-color: #16213E;
   font-family: "Montserrat", sans-serif;
-}
-
-.perfil {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.img-perfil {
-  width: 25%;
-  margin-top: 15px;
-}
-
-.img-habil {
-  width: 25%;
-  margin-top: 15px;
-}
-
-.titulo-perfil {
-  color: #BAD7E9;
-  font-size: max(22px, 5vw);
-  font-weight: bold;
-  margin-top: 15px;
-}
-
-.text-perfil {
-  color: #BACDDB;
-  font-size: min(30px, 4vw);
-  font-weight: bold;
-  margin: 10px 70px 10px 70px;
 }
