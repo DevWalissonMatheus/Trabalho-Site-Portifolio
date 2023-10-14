@@ -7,6 +7,12 @@
 
 body {
   background: #232D3F;
+  height: 100vh;
+}
+
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .flex {
@@ -130,16 +136,17 @@ li a:hover {
   align-items: center;
   justify-content: center;
   gap: 80px;
-  margin-top: 50px;
+  margin-top: 110px;
+  margin-bottom: 50px;
 }
 
 #perfil-frase {
   color: #BAD7E9;
-  font-size: 56px;
+  font-size: 60px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   line-height: 55px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 #perfil-slogan {
@@ -150,10 +157,39 @@ li a:hover {
 }
 
 .img-perfil {
-  width: 450px;
+  width: 420px;
 }
 
-/* Meio da Pagina e um pequeno resumo sobre mim */
+/* Sobre mim */
 #middle-container {
   font-family: "Montserrat", sans-serif;
+}
+
+#middle-container .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+#sobre-mim {
+  display: flex;
+  justify-content: center;
+  color: #03AFEC;
+  font-size: 60px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  padding-top: 70px;
+  margin-bottom: 10px;
+}
+
+.txt-sobre {
+  color: #BAD7E9;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  line-height: 23px;
+}
+
+.img-sobre {
+  width: 450px;
 }
