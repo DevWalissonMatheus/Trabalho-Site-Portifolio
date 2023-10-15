@@ -19,6 +19,16 @@ body {
   display: flex;
 }
 
+.titulo {
+  color: #03AFEC;
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  padding-top: 70px;
+  margin-bottom: 10px;
+}
+
 /* Barra de Tarefas */
 li a {
   color: #B4B4B3;
@@ -172,10 +182,9 @@ li a:hover {
 }
 
 #sobre-mim {
-  display: flex;
-  justify-content: center;
   color: #03AFEC;
-  font-size: 60px;
+  text-align: center;
+  font-size: 50px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   padding-top: 70px;
@@ -192,4 +201,56 @@ li a:hover {
 
 .img-sobre {
   width: 450px;
+}
+
+.btn-sobre-contato {
+  color: #03AFEC;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.7s;
+  display: inline-block;
+  transition: .09s;
+}
+
+.btn-sobre-contato:hover {
+  color: #fff;
+  transform: scale(1.04);
+}
+
+/* Tecnologias que eu domino */
+#tech-sobre .flex {
+  align-items: center;
+  justify-content: center;
+}
+
+#tech-sobre {
+  padding: 20px 4% 40px;
+}
+
+.box-tech {
+  padding: 30px;
+  width: 370px;
+  height: 390px;
+  color: #BAD7E9;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  line-height: 23px;
+  border-radius: 20px;
+  margin: 0 20px;
+  transition: .4s;
+}
+
+.box-tech:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #FFFFFF82;
+}
+
+.box-tech h3 {
+  font-size: 26px;
+  margin: 15px 0;
+}
+
+.img-dev {
+  width: 100px;
+  
 }
