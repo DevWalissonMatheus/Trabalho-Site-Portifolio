@@ -236,7 +236,7 @@ li a:hover {
   font-weight: bold;
   line-height: 23px;
   border-radius: 20px;
-  margin: 0 20px;
+  margin: 0 30px;
   transition: .4s;
 }
 
@@ -254,3 +254,4 @@ li a:hover {
   width: 100px;
   
 }
+
