@@ -44,7 +44,7 @@ li a:hover {
   opacity: 0.9;
   height: 10vh;
   width: 100%;
-  z-index: 2;
+  z-index: 4;
 }
 
 .logo {
@@ -360,9 +360,77 @@ li a:hover {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  border-radius: 15px;
   transition: 0.4s ease-in-out;
 }
 
 .btn-projetos:hover {
   box-shadow: 0px 7px 10px rgba(0, 0, 0, 5);
+}
+
+/* Área de Contato */
+#bottom-contato {
+  padding: 80px 4%;
+}
+
+#contato {
+  color: #03AFEC;
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  padding-top: 110px;
+  margin-bottom: 30px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inp-contato, .txt-mensagem {
+  width: 100%;
+  background-color: #001C30;
+  border: none;
+  outline: none;
+  padding: 20px 15px;
+  border-radius: 15px;
+  color: #BAD7E9;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+#bottom-contato textarea {
+  max-width: 500px;
+  height: 150px;
+  resize: none;
+}
+
+.btn-enviar {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-enviar input {
+  background-color: #03AFEC;
+  color: #232D3F;
+  font-family: 'Kanit', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 20px;
+  width: 180px;
+  transition: 0.5s;
+}
+
+.btn-enviar input:hover {
+  color: #040D12;
+  box-shadow: 0 0 8px #98E4FF;
+  transform: scale(1.04);
 }
