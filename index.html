@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -13,8 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 </head>
-
+</style>
 <body>
     <header>
         <nav id="barra-tarefas">
@@ -29,7 +30,7 @@
                 <li><a href="#sobre-mim">Sobre</a></li>
                 <li><a href="#tech-dominio">Tecnologias</a></li>
                 <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -72,12 +73,12 @@
                             Comprometo-me com a busca contínua de conhecimento e crescimento profissional
                             no campo sempre em evolução do desenvolvimento de software. Se você encontrar
                             oportunidades empolgantes que estejam alinhadas com minhas habilidades e aspirações,
-                            sinta-se à vontade para entrar em <a class="btn-sobre-contato" href="#">contato</a>.</p>
+                            sinta-se à vontade para entrar em <a class="btn-sobre-contato" href="#contato">contato</a>.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="tech-sobre">
+        <section id="middle-sobre">
             <div class="interface">
                 <h2 id="tech-dominio">TECNOLOGIAS</h2>
                 <div class="flex">
@@ -149,8 +150,21 @@
                 </div>
             </div>
         </section>
+        <section id="bottom-contato">
+            <div class="interface">
+                <h2 id="contato">CONTATO</h2>
+                <form action="">
+                    <input class="inp-contato" type="text" placeholder="Nome">
+                    <input class="inp-contato" type="email" name="" id="" placeholder="Email">
+                    <input class="inp-contato" type="number" name="" id="" placeholder="Número de Celular">
+                    <textarea class="txt-mensagem" name="" id="" placeholder="Mensagem"></textarea>
+                    <div class="btn-enviar"><input type="submit" value="Enviar"></div>
+                </form>
+            </div>
+        </section>
     </main>
     <script src="menu-responsivo.js"></script>
+    <script src="rolagem-suave.js"></script>
 </body>
 
 </html>
