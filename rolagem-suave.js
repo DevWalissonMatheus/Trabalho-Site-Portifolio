@@ -1,4 +1,4 @@
-const menuBotoes = document.querySelectorAll('.nav-botoes a[href^="#"]');
+const menuBotoes = document.querySelectorAll('body a[href^="#"]');
 
 menuBotoes.forEach((item) => {
   item.addEventListener("click", rolagemSuaveID);
