@@ -39,7 +39,7 @@ li a:hover {
   position: fixed;
   justify-content: space-around;
   align-items: center;
-  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: #23232E;
   opacity: 0.9;
   height: 10vh;
@@ -370,7 +370,7 @@ li a:hover {
 
 /* Área de Contato */
 #bottom-contato {
-  padding: 80px 4%;
+  padding: 80px 4% 15px 4%;
 }
 
 #contato {
@@ -380,7 +380,7 @@ li a:hover {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   padding-top: 110px;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 
 form {
@@ -412,7 +412,7 @@ form {
 
 .btn-enviar {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 12px;
 }
 
 .btn-enviar input {
@@ -433,4 +433,43 @@ form {
   color: #040D12;
   box-shadow: 0 0 8px #98E4FF;
   transform: scale(1.04);
+}
+
+/* Rodapé */
+#bottom-rodape {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background: #23232E;
+}
+
+.rodape {
+  height: 9vh;
+  width: 100%;
+}
+
+.footer-link {
+  color: #B4B4B3;
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+  transition: .07s;
+  margin-left: 15px;
+  margin-top: 8px;
+  margin-bottom: 6px;
+}
+
+.footer-link:hover {
+  color: #fff;
+  transform: scale(1.15);
+}
+
+.direitos {
+  text-align: center;
+  color: #7D7C7C;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
 }
