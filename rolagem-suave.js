@@ -11,7 +11,7 @@ function getScrollTopByHref(element) {
 
 function rolagemSuaveID(evento) {
   evento.preventDefault();
-  const vai = getScrollTopByHref(evento.target);
+  const vai = getScrollTopByHref(evento.target) -45;
   roleParaPosicao(vai);
 }
 
