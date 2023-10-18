@@ -19,16 +19,6 @@ body {
   display: flex;
 }
 
-@media screen and (max-width: 1020px) {
-  .flex {
-    flex-direction: column;
-  }
-
-  #top-container .flex {
-    flex-direction: column-reverse;
-  }
-}
-
 /* Barra de Tarefas */
 li a {
   color: #B4B4B3;
@@ -51,7 +41,6 @@ li a:hover {
   align-items: center;
   font-family: 'Poppins', sans-serif;
   background: #23232E;
-  opacity: 0.9;
   height: 10vh;
   width: 100%;
   z-index: 4;
@@ -84,7 +73,7 @@ li a:hover {
   transition: 0.3s;
 }
 
-@media (max-width: 999px) {
+@media screen and (max-width: 999px) {
   body {
     overflow-x: hidden;
   }
@@ -171,6 +160,31 @@ li a:hover {
   width: 420px;
 }
 
+@media screen and (max-width: 1330px) {
+  #top-container {
+    padding: 1px 4% 0 4%;
+  }
+
+  #top-container .flex {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  #top-container .img-perfil {
+    width: 240px;
+  }
+
+  #top-container #perfil-frase {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
+
+  #top-container #perfil-slogan {
+    font-size: 22px;
+  }
+}
+
 /* Sobre mim */
 #middle-container {
   font-family: "Montserrat", sans-serif;
@@ -188,7 +202,7 @@ li a:hover {
   font-size: 50px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
-  padding-top: 110px;
+  padding-top: 50px;
   margin-bottom: 20px;
 }
 
@@ -218,14 +232,48 @@ li a:hover {
   transform: scale(1.04);
 }
 
+@media screen and (max-width: 1330px) {
+  #middle-container .flex {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #middle-container #sobre-mim {
+    font-size: 30px;
+    padding-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  #middle-container .img-sobre {
+    visibility: hidden;
+    width: 0;
+  }
+
+  #middle-container .txt-sobre {
+    font-size: 16px;
+    margin: 0 4%;
+    line-height: 20px;
+  }
+}
+
 /* Tecnologias que eu domino */
-#tech-sobre .flex {
+#middle-tech .flex {
   align-items: center;
   justify-content: center;
 }
 
-#tech-sobre {
+#middle-tech {
   padding: 20px 4% 40px;
+}
+
+#tech-dominio {
+  color: #03AFEC;
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  padding-top: 55px;
+  margin-bottom: 65px;
 }
 
 .box-tech {
@@ -242,16 +290,6 @@ li a:hover {
   z-index: 1;
 }
 
-#tech-dominio {
-  color: #03AFEC;
-  text-align: center;
-  font-size: 50px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
-  padding-top: 110px;
-  margin-bottom: 65px;
-}
-
 .box-tech:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px #FFFFFF82;
@@ -264,6 +302,35 @@ li a:hover {
 
 .img-dev {
   width: 100px;
+}
+
+@media screen and (max-width: 1330px) {
+  #middle-tech .flex {
+    flex-direction: column;
+  }
+
+  #middle-tech #tech-dominio {
+    font-size: 30px;
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  #middle-tech .box-tech {
+    width: 340px;
+    height: 360px;
+    line-height: 20px;
+    margin-bottom: 35px;
+  }
+
+  #middle-tech .img-dev {
+    width: 70px;
+  }
+
+  #middle-tech .box-tech h3 {
+    font-size: 25px;
+    line-height: 25px;
+    margin: 10px 0;
+  }
 }
 
 /* Projetos */
@@ -280,7 +347,7 @@ li a:hover {
   font-size: 50px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
-  padding-top: 110px;
+  padding-top: 50px;
   margin-bottom: 15px;
 }
 
@@ -353,9 +420,23 @@ li a:hover {
   box-shadow: 0px 7px 10px rgba(0, 0, 0, 5);
 }
 
+@media screen and (max-width: 1330px) {
+  #middle-projetos #projetos {
+    font-size: 30px;
+    padding-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  #middle-projetos .portfolio-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 4%;
+  }
+}
+
 /* Área de Contato */
 #bottom-contato {
-  padding: 80px 4% 15px 4%;
+  padding: 10px 4% 15px 4%;
 }
 
 #contato {
@@ -364,7 +445,7 @@ li a:hover {
   font-size: 50px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
-  padding-top: 110px;
+  padding-top: 50px;
   margin-bottom: 12px;
 }
 
@@ -418,6 +499,22 @@ form {
   color: #040D12;
   box-shadow: 0 0 8px #98E4FF;
   transform: scale(1.04);
+}
+
+@media screen and (max-width: 1330px) {
+  #bottom-contato #contato {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  #bottom-contato form {
+    gap: 12px;
+  }
+
+  #bottom-contato .btn-enviar {
+    margin-top: 30px;
+    margin-bottom: 24px;
+  }
 }
 
 /* Rodapé */
