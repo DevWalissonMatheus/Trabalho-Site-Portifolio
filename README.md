@@ -25,4 +25,4 @@ Todas a opções do site funcionam perfeitamente e com alto desempenho.
 
 ### Rolagem Suave e Barra de Tarefas Lateral
 
-Todos os links internos do site ao serem clicados vão de forma suave e possui uma barra lateral para dispositivos móveis.
+Todos os links internos do site ao serem clicados vão de forma suave até a opção escolhida e possui uma barra lateral para dispositivos móveis.
