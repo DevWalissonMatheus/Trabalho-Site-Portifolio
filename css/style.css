@@ -1,71 +1,70 @@
 /* Geral */
 * {
   margin: 0;
-  padding: 0;
+  padding: 0; /* Faz uma mudança "global" no site como um todo */
   box-sizing: border-box;
 }
 
 body {
-  background: #232D3F;
+  background: #232D3F; /* Adiciona a cor de fundo do Site */
   height: 100vh;
 }
 
 .interface {
-  max-width: 1280px;
-  margin: 0 auto;
+  max-width: 1280px; /* Classe que pode ser usada em vários lugares do código */
+  margin: 0 auto;     /* sem precisar reconfigurar */
 }
 
 .flex {
-  display: flex;
+  display: flex; /* Outra classe que posso usar em vários lugares do site */
 }
 
 /* Barra de Tarefas */
 li a {
-  color: #B4B4B3;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
+  color: #B4B4B3; /* Cor da fonte dos botões da barra de tarefas */
+  font-weight: bold; /* Define a fonte para ficar em negrito */
+  text-decoration: none; /* Tira o sublinhado dos links */
+  transition: 0.3s; /* Cria uma transição "lenta" para o efeito hover */
   display: inline-block;
-  transition: .07s;
 }
 
 li a:hover {
-  color: #fff;
-  transform: scale(1.15);
+  color: #fff; /* Cor do link quando passa o mouse encima */
+  transform: scale(1.15); /* Cria um efeito de zoom a passar o mouse encima */
 }
 
 #barra-tarefas {
-  display: flex;
-  position: fixed;
-  justify-content: space-around;
-  align-items: center;
-  font-family: 'Poppins', sans-serif;
-  background: #23232E;
-  height: 10vh;
-  width: 100%;
-  z-index: 4;
+  display: flex; /* Deixa o objeto flexível e fácil para movimentar */
+  position: fixed; /* Deixa a barra de tarefas Fixada */ 
+  justify-content: space-around; /* Coloca um espaçamento aos botões */
+  align-items: center; /* Deixa os itens alinhados ao cento */
+  font-family: 'Poppins', sans-serif; /* Define a fonte dos botões */
+  background: #23232E; /* Cor de fundo da barra de tarefas */
+  height: 10vh; /* Altura da barra de tarefas */
+  width: 100%; /* Largura da barra de tarefas */
+  z-index: 4; /* Deixa a barra de tarefas a frente de outros itens da página */
 }
 
 .logo {
-  height: 80%;
+  height: 80%; /* Define a largura da logo */
 }
 
 .nav-botoes {
-  list-style: none;
+  list-style: none; /* Retira o estilo de lista padrão */
   display: flex;
 }
 
 .nav-botoes li {
-  letter-spacing: 3px;
-  margin-left: 32px;
+  letter-spacing: 3px; /* Define a distância entre as letras */
+  margin-left: 32px; /* Define uma margem entre os botões */
 }
 
 .menu-responsivo {
-  display: none;
-  cursor: pointer;
+  display: none; /* Deixa o menu "invisível" */
+  cursor: pointer; /* Define o curso para um ponteiro */
 }
 
-.menu-responsivo div {
+.menu-responsivo div { /* Seleciona apenas a div que está dentro da classe "menu-responsivo" */
   width: 32px;
   height: 2px;
   background: #fff;
@@ -73,26 +72,26 @@ li a:hover {
   transition: 0.3s;
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 999px) { /* Usado para deixar a barra de tarefas responsiva */
   body {
-    overflow-x: hidden;
-  }
+    overflow-x: hidden; /* Deixa o menu lateral fora da parte visível da tela até que fique */
+  }                     /* em uma tela menor que 999px */
   .nav-botoes {
-    position: absolute;
-    top: 8vh;
-    right: 0;
+    position: absolute; /* Define a posição para absoluta */
+    top: 8vh; /* Define uma margem superior */
+    right: 0; /* Define uma margem lateral */
     width: 50vw;
     height: 92vh;
     background: #23232E;
-    flex-direction: column;
+    flex-direction: column; /* Define os botões para ficarem na vertical */
     align-items: center;
     justify-content: space-around;
-    opacity: 0.9;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in;
+    opacity: 0.9; /* Deixa a barra lateral transparente */
+    transform: translateX(100%); /* Deixa a barra fora da area visível da tela */
+    transition: transform 0.3s ease-in; /* Define a "velocidade" da animação */
   }
   .nav-botoes li {
-    margin-left: 0;
+    margin-left: 0; 
     opacity: 0;
   }
   .menu-responsivo {
@@ -101,48 +100,50 @@ li a:hover {
 }
 
 .nav-botoes.active {
-  transform: translateX(0);
+  transform: translateX(0); /* Quando a clica na barra lateral ela volta para a parte visível*/
 }
 
-@keyframes navLinkFade {
+@keyframes navLinkFade { /* Define como será a renderização da animação da barra lateral */
   from {
-    opacity: 0;
-    transform: translateX(50px);
+    opacity: 0; /* Sairá de 0 de Opacidade */
+    transform: translateX(50px); /* Sairá de 50px */ 
   }
   to {
-    opacity: 1;
-    transform: translateX(0);
+    opacity: 1; /* Para 1 de Opacidade */
+    transform: translateX(0); /* Para 0px */
   }
 }
 
-.menu-responsivo.active .linha1 {
+/* Essas 3 classes linha1, 2 e 3 são estilizadas para se transformar em um x quando clicado */
+
+.menu-responsivo.active .linha1 { /* Linha de cima */
   transform: rotate(-45deg) translate(-8px, 8px);
 }
 
-.menu-responsivo.active .linha2 {
+.menu-responsivo.active .linha2 { /* Linha do meio */
   opacity: 0;
 }
 
-.menu-responsivo.active .linha3 {
+.menu-responsivo.active .linha3 { /* Linha de Baixo */
   transform: rotate(45deg) translate(-5px, -7px);
 }
 
 /* Topo do Site */
 #top-container {
-  padding: 70px 5% 0 5%;
+  padding: 70px 5% 0 5%; /* Define a altura e largura da div principal */
 }
 
-#top-container .flex {
-  align-items: center;
-  justify-content: center;
-  gap: 80px;
+#top-container .flex { /* Define um pouco mais de configuração a classe pronta de flex */
+  align-items: center; /* Centraliza os itens da div */
+  justify-content: center; /* Deixa o conteúdo centralizados no meio da div */
+  gap: 80px; /* Dá um espaçamento */
   margin-top: 110px;
   margin-bottom: 50px;
 }
 
 #perfil-frase {
   color: #BAD7E9;
-  font-size: 60px;
+  font-size: 60px; /* Define o tamanho da fonte do site */
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   line-height: 55px;
@@ -157,31 +158,31 @@ li a:hover {
 }
 
 .img-perfil {
-  width: 420px;
+  width: 420px; /* Define a largura da imagem */
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 750px) { /* Usei para deixar responsivo para os celulares */
   #top-container {
     padding: 1px 4% 0 4%;
   }
 
   #top-container .flex {
-    flex-direction: column-reverse;
-    gap: 30px;
+    flex-direction: column-reverse; /* Deixa os elementos na vertical */
+    gap: 30px; /* Dá um espaçamento entre os itens */
   }
 
   #top-container .img-perfil {
-    width: 240px;
+    width: 240px; /* Define o tamanho da imagem para ficar menor */
   }
 
   #top-container #perfil-frase {
-    font-size: 28px;
-    line-height: 32px;
-    margin-bottom: 20px;
+    font-size: 28px; /* Deixa a fonte menor */
+    line-height: 32px; /* Define o espaçamento entre os parágrafos */
+    margin-bottom: 20px; /* Define uma distancia entre a frase e o slogan */
   }
 
   #top-container #perfil-slogan {
-    font-size: 22px;
+    font-size: 22px; /* Diminui o tamanho da fonte */
   }
 }
 
@@ -191,16 +192,16 @@ li a:hover {
 }
 
 #middle-container .flex {
-  align-items: center;
-  justify-content: center;
-  gap: 80px;
+  align-items: center; /* Alinha os itens no centro */
+  justify-content: center; /* Deixa o conteúdo no centro */
+  gap: 80px; /* Define um espaçamento */
 }
 
 #sobre-mim {
-  color: #03AFEC;
-  text-align: center;
-  font-size: 50px;
-  font-family: 'Poppins', sans-serif;
+  color: #03AFEC; /* Define a cor da fonte */
+  text-align: center; /* Alinha no centro */
+  font-size: 50px; /* Define o tamanho da fonte */
+  font-family: 'Poppins', sans-serif; /* Define a fonte */
   font-weight: bold;
   padding-top: 50px;
   margin-bottom: 20px;
@@ -211,26 +212,26 @@ li a:hover {
   font-size: 18px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  line-height: 23px;
-  margin: 0 2%;
+  line-height: 23px; /* Define o distanciamento entre os parágrafos */
+  margin: 0 2%; /* Define uma margem */
 }
 
 .img-sobre {
-  width: 450px;
+  width: 450px; /* Define a largura da imagem */
 }
 
 .btn-sobre-contato {
   color: #03AFEC;
   font-weight: bold;
-  text-decoration: none;
+  text-decoration: none; /* Tira o sublinhado do link */
   transition: 0.7s;
   display: inline-block;
-  transition: .09s;
+  transition: .09s; /* Define a velocidade em que o botão subirá */
 }
 
 .btn-sobre-contato:hover {
   color: #fff;
-  transform: scale(1.04);
+  transform: scale(1.04); /* Define o quando o botão irá subir */
 }
 
 @media screen and (max-width: 750px) {
@@ -246,7 +247,7 @@ li a:hover {
   }
 
   #middle-container .img-sobre {
-    visibility: hidden;
+    visibility: hidden; /* Deixa a imagem invisível */
     width: 0;
   }
 
@@ -274,26 +275,26 @@ li a:hover {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   padding-top: 55px;
-  margin-bottom: 65px;
+  margin-bottom: 65px; 
 }
 
 .box-tech {
   padding: 30px;
-  width: 370px;
-  height: 390px;
+  width: 370px; /*Define a largura */
+  height: 390px; /*Define a altura */
   color: #BAD7E9;
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
+  font-weight: bold; /*Deixa o texto em negrito */
   line-height: 23px;
-  border-radius: 20px;
-  margin: 0 30px;
-  transition: .4s;
-  z-index: 1;
+  border-radius: 20px; /*Deixa as bordas aredondadas */
+  margin: 0 30px; /*Adiciona uma margem entre os itens */
+  transition: .4s; /*Define uma velocidade para o efeito de subida */
+  z-index: 1; /*Deixa os outros itens a frente */
 }
 
 .box-tech:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 10px #FFFFFF82;
+  box-shadow: 0 0 10px #FFFFFF82; /*Adiciona uma sombra na borda */
 }
 
 .box-tech h3 {
@@ -305,7 +306,7 @@ li a:hover {
   width: 100px;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 750px) { /*Deixa a sessão responsiva */
   #middle-tech .flex {
     flex-direction: column;
   }
@@ -336,10 +337,10 @@ li a:hover {
 
 /* Projetos */
 .portfolio-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: grid; /* Define o display para ficar mais fácil de organizar os divs lado a lado */
+  grid-template-columns: repeat(3, 1fr); /* Deixa 3 itens alinhado na mesma "grade" */
   align-items: center;
-  gap: 1rem;
+  gap: 1rem; /* Define o espaçamento entre os itens */
 }
 
 #projetos {
@@ -353,38 +354,39 @@ li a:hover {
 }
 
 .portfolio-box {
-  position: relative;
-  border-radius: 2rem;
+  position: relative; /* Define a posição para relativa */
+  border-radius: 2rem; /* Deixa os cantos arredondados */
   box-shadow: 0 0 1rem var(#FFFFFF82);
-  overflow: hidden;
+  overflow: hidden; /* Deixa o conteúdo invisível */
   display: flex;
   margin: 0 3%;
 }
 
 .portfolio-box img {
-  width: 100%;
+  width: 100%; /* Define a imagem para ocupar todo o espaço da div */
   transition: .5s ease;
 }
 
 .portfolio-box:hover img {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Define o quanto a imagem irá subir */
 }
 
 .portfolio-box .info-portfolio {
-  position: absolute;
+  position: absolute; /* Define a posição para absoluta */
   bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(10, 206, 221, 0.5), rgba(3, 175, 236, 1));
+  background: linear-gradient(rgba(10, 206, 221, 0.5), rgba(3, 175, 236, 1)); /* Define as cores */
+                                                                          /* para ficarem com tons diferentes */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
   padding: 0 4rem;
-  transform: translateY(100%);
-  transition: .5s ease;
+  transform: translateY(100%); /* Reposiciona o conteúdo quando passa o mouse encima */
+  transition: .5s ease; /* Define a velocidade da transição */
 }
 
 .portfolio-box:hover .info-portfolio{
@@ -392,37 +394,37 @@ li a:hover {
 }
 
 .info-portfolio h4 {
-  font-size: 2.4rem;
+  font-size: 2.4rem; /* Define o tamanho da fonte do titulo do projeto */
   color: #272829;
   font-family: 'Poppins', sans-serif;
 }
 
 .info-portfolio p {
-  font-size: 1.3rem;
+  font-size: 1.3rem; /* Define o tamanho da fonte do texto sobre o projeto */
   color: #212A3E;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  margin: 2rem 0 1rem;
+  margin: 1.3rem 0 1rem;
 }
 
 .btn-projetos {
-  text-decoration: none;
+  text-decoration: none; /* Tira o sublinhado do botão */
   padding: 0.5rem 1rem;
   background: #fff;
   color: #232D3F;
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   font-weight: bold;
-  cursor: pointer;
-  border-radius: 15px;
+  cursor: pointer; /* Muda o tipo de ponteiro quando se passa o mouse encima */
+  border-radius: 15px; /* Deixa os cantos arredondados */
   transition: 0.4s ease-in-out;
 }
 
 .btn-projetos:hover {
-  box-shadow: 0px 7px 10px rgba(0, 0, 0, 5);
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 5); /* Define um sombreamento para o botão */
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 750px) { /* Deixa a sessão responsiva */
   #middle-projetos #projetos {
     font-size: 30px;
     padding-top: 30px;
@@ -431,7 +433,7 @@ li a:hover {
 
   #middle-projetos .portfolio-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Deixa os projetos na vertical */
     margin: 0 5%;
   }
 
@@ -448,7 +450,7 @@ li a:hover {
 
 /* Área de Contato */
 #bottom-contato {
-  padding: 10px 5% 15px 5%;
+  padding: 10px 5% 20px 5%;
 }
 
 #contato {
@@ -458,23 +460,23 @@ li a:hover {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   padding-top: 50px;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 
 form {
-  max-width: 500px;
+  max-width: 500px; /* Define uma largura máxima para o formulário */
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  gap: 10px;
+  flex-direction: column; /* Deixa os elementos na vertical */
+  gap: 16px; /* Adiciona um espaçamento entre os itens */
 }
 
 .inp-contato, .txt-mensagem {
   width: 100%;
   background-color: #001C30;
   border: none;
-  outline: none;
+  outline: none; /* Retira o contorno */
   padding: 20px 15px;
   border-radius: 15px;
   color: #BAD7E9;
@@ -483,33 +485,33 @@ form {
 }
 
 #bottom-contato textarea {
-  max-width: 500px;
-  height: 150px;
-  resize: none;
+  max-width: 500px; /* Define uma largura máxima para a área de texto */
+  height: 190px; /* Define a altura da área de texto */
+  resize: none; /* Retira a opção de mudar o tamanho da area de texto */
 }
 
 .btn-enviar {
   text-align: center;
-  margin-top: 12px;
+  margin-top: 16px;
 }
 
 .btn-enviar input {
-  background-color: #03AFEC;
-  color: #232D3F;
-  font-family: 'Kanit', sans-serif;
-  font-size: 22px;
+  background-color: #03AFEC; /* Define a cor de fundo do botão */
+  color: #232D3F; /* Define a cor da fonte do botão */
+  font-family: 'Kanit', sans-serif; /* Define a fonte do botão */
+  font-size: 22px; /* Define o tamanho da fonte do botão */
   font-weight: bold;
   cursor: pointer;
   padding: 10px 10px;
-  border: none;
-  border-radius: 20px;
+  border: none; /* Retira a borda do botão */
+  border-radius: 20px; /* Deixa o botão arredondado */
   width: 180px;
   transition: 0.5s;
 }
 
 .btn-enviar input:hover {
   color: #040D12;
-  box-shadow: 0 0 8px #98E4FF;
+  box-shadow: 0 0 8px #98E4FF; /* Adiciona um sombreamento ao botão */
   transform: scale(1.04);
 }
 
@@ -532,15 +534,15 @@ form {
 /* Rodapé */
 #bottom-rodape {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-around; /* Adiciona um espaçamento entre itens */
+  align-items: center; /* Deixa os itens alinhados ao meio */
   font-family: 'Poppins', sans-serif;
-  background: #23232E;
+  background: #23232E; /* Define a cor do rodapé */
 }
 
 .rodape {
-  height: 9vh;
-  width: 100%;
+  height: 9vh; /* Define a altura da barra do rodapé */
+  width: 100%; /* Define a largura do rodapé */
 }
 
 .footer-link {

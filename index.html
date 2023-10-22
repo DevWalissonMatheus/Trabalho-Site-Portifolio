@@ -5,67 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="shortcut icon" href="IconFavicon.ico" type="image/x-icon">
-
+    <link rel="stylesheet" href="css/style.css"> <!-- CSS -->
+    <link rel="shortcut icon" href="IconFavicon.ico" type="image/x-icon"> <!-- Favicon = ícone da página -->
+    <!-- Fontes usadas no Site -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 </head>
-</style>
+
+<!-- Aluno: Walisson Matheus
+    RU: 3989950 -->
 
 <body>
-    <header>
+    <header>  <!-- Sessão da Barra de Tarefas -->
         <nav id="barra-tarefas">
-            <img class="logo" src="images/logo-name-ru.png" alt="logo" class="logo">
-            <div class="menu-responsivo">
+            <img class="logo" src="images/logo-name-ru.png" alt="logo"> <!-- Logo da barra de tarefas -->
+            <div class="menu-responsivo"> <!-- Div responsável pelo botão da barra lateral da barra de tarefas -->
                 <div class="linha1"></div>
-                <div class="linha2"></div>
+                <div class="linha2"></div> <!-- As três linhas que formam o botão da barra lateral -->
                 <div class="linha3"></div>
             </div>
-            <ul class="nav-botoes">
+            <ul class="nav-botoes"> <!-- Lista responsável pelas opções da barra de tarefas -->
                 <li><a href="#top-container">Inicio</a></li>
                 <li><a href="#sobre-mim">Sobre</a></li>
-                <li><a href="#tech-dominio">Tecnologias</a></li>
-                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#tech-dominio">Tecnologias</a></li> <!-- Ancoras internas para movimentação --> 
+                <li><a href="#projetos">Projetos</a></li>        
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="top-container">
-            <div class="interface">
-                <div class="flex">
-                    <div class="txt-perfil-top">
+        <section id="top-container"> <!-- Sessão da Tela Inicial -->
+            <div class="interface"> <!-- Chama a classe de estilo geral da interface -->
+                <div class="flex"> <!-- Chama a classe flex geral do css -->
+                    <div class="txt-perfil-top"> <!-- Div para o titulo e frase da pagina inicial -->
                         <h1 id="perfil-frase">Construindo o futuro, um código de cada vez.</h1>
                         <p id="perfil-slogan">O desenvolvimento é a essência de transformar ideias em
                             realidade digital, uma colaboração criativa entre o pensamento e a linguagem
                             de máquina, moldando a experiência online de forma única e inovadora.</p>
                     </div>
-                    <div>
+                    <div> <!-- Div com a imagem da pagina inicial -->
                         <img class="img-perfil" src="images/img-perfil.png" alt="imagem-perfil">
                     </div>
                 </div>
             </div>
         </section>
-        <section id="middle-container">
+        <section id="middle-container"> <!-- Sessão Sobre Mim -->
             <div class="interface">
-                <h2 id="sobre-mim">SOBRE MIM</h2>
+                <h2 id="sobre-mim">SOBRE MIM</h2>  <!-- Titulo da sessão -->
                 <div class="flex">
                     <img class="img-sobre" src="images/icon-sobre-mim.png" alt="imagem-dev-sobre-mim">
-                    <div class="box-intro">
+                    <div class="box-intro"> <!-- Div com os Textos da Sessão -->
                         <p class="txt-sobre">Tenho 22 anos e iniciei minha jornada no mundo da programação em 2022,
-                            quando
-                            iniciei meu curso de graduação em Análise e Desenvolvimento de Software.
+                            quando iniciei meu curso de graduação em Análise e Desenvolvimento de Software.
                             Desde então, tenho me dedicado constantemente a adquirir conhecimento,
                             absorvendo com entusiasmo tudo o que posso sobre programação.</p>
                         <br>
                         <p class="txt-sobre">Minha principal área de interesse é o desenvolvimento web front-end, na
-                            qual
-                            tenho trabalhando na criação de interfaces atraentes e aplicativos web amigáveis
+                            qual tenho trabalhando na criação de interfaces atraentes e aplicativos web amigáveis
                             para o usuário. Tenho uma forte afinidade com Python e também explorei o mundo do
                             Java, sempre em busca de oportunidades para aprimorar minhas habilidades de programação.</p>
                         <br>
@@ -75,15 +73,17 @@
                             no campo sempre em evolução do desenvolvimento de software. Se você encontrar
                             oportunidades empolgantes que estejam alinhadas com minhas habilidades e aspirações,
                             sinta-se à vontade para entrar em <a class="btn-sobre-contato" href="#contato">contato</a>.
+                            <!-- Botão personalizado para levar à sessão de contato -->
                         </p>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="middle-tech">
+        <section id="middle-tech"> <!-- Sessão da Tecnologias -->
             <div class="interface">
                 <h2 id="tech-dominio">TECNOLOGIAS</h2>
                 <div class="flex">
+                    <!-- Cada div "box-tech" corresponde a uma tecnologia, todas usam a mesma estilização CSS -->
                     <div class="box-tech">
                         <img class="img-dev" src="images/dev-web-icon.png" alt="logo-dev-web">
                         <h3>Desenvolvimento Web</h3>
@@ -106,20 +106,22 @@
                             que facilitam ao máximo a vida dos usuários.</p>
                     </div>
                 </div>
-                <!-- <h2 id="projetos">PROJETOS</h2> -->
             </div>
         </section>
-        <section id="middle-projetos">
+        <section id="middle-projetos"> <!-- Sessão de Projetos -->
             <div class="interface">
                 <h2 id="projetos">PROJETOS</h2>
-                <div class="portfolio-container">
+                <div class="portfolio-container"> <!--Div responsável por todas a div internas, usei
+                    para ficar mais fácil na hora de estilizar e colocar uma ao lado da outra -->
                     <div class="portfolio-box">
                         <img class="img-portfolio" src="/images/projeto-1.png" alt="">
                         <div class="info-portfolio">
                             <h4>Grade de Preços</h4>
                             <p>HTML e CSS - Mostra os valores de um curso</p>
-                            <a class="btn-projetos" target="_blank" href="https://github.com/DevWalissonMatheus/Treino-HTML-CSS">
+                            <a class="btn-projetos" target="_blank"
+                                href="https://github.com/DevWalissonMatheus/Treino-HTML-CSS">
                                 Ver Projeto</a>
+                                <!-- Botão que leva ao projeto, target="_blank" abre em uma nova pagina -->
                         </div>
                     </div>
                     <div class="portfolio-box">
@@ -127,7 +129,8 @@
                         <div class="info-portfolio">
                             <h4>Gerenciamento de Alunos</h4>
                             <p>Java - Cadastra as notas e informa quem esta aprovado.</p>
-                            <a class="btn-projetos" target="_blank" href="https://github.com/DevWalissonMatheus/Trabalho-Java-2">
+                            <a class="btn-projetos" target="_blank"
+                                href="https://github.com/DevWalissonMatheus/Trabalho-Java-2">
                                 Ver Projeto</a>
                         </div>
                     </div>
@@ -136,7 +139,8 @@
                         <div class="info-portfolio">
                             <h4>Formulário de Cadastro</h4>
                             <p>C Sharp - Programa feito durante uma materia da faculdade.</p>
-                            <a class="btn-projetos" target="_blank" href="https://github.com/DevWalissonMatheus/Trabalhos-Progamacao-Visual/tree/main/Trabalho%202">
+                            <a class="btn-projetos" target="_blank"
+                                href="https://github.com/DevWalissonMatheus/Trabalhos-Progamacao-Visual/tree/main/Trabalho%202">
                                 Ver Projeto</a>
                         </div>
                     </div>
@@ -145,7 +149,8 @@
                         <div class="info-portfolio">
                             <h4>Site</h4>
                             <p>HTML, CSS e Bootstrap - Site feito durante um curso.</p>
-                            <a class="btn-projetos" target="_blank" href="https://github.com/DevWalissonMatheus/CSS-Meu-Site">
+                            <a class="btn-projetos" target="_blank"
+                                href="https://github.com/DevWalissonMatheus/CSS-Meu-Site">
                                 Ver Projeto</a>
                         </div>
                     </div>
@@ -154,7 +159,8 @@
                         <div class="info-portfolio">
                             <h4>Calculadora de IMC</h4>
                             <p>Python - Calcula o IMC e informa em qual status se encaixa.</p>
-                            <a class="btn-projetos" target="_blank" href="https://github.com/DevWalissonMatheus/Calcuradora-Python-IMC">
+                            <a class="btn-projetos" target="_blank"
+                                href="https://github.com/DevWalissonMatheus/Calcuradora-Python-IMC">
                                 Ver Projeto</a>
                         </div>
                     </div>
@@ -163,7 +169,8 @@
                         <div class="info-portfolio">
                             <h4>Site de Portfólio</h4>
                             <p>HTML, CSS e Java Script - Feito durante uma materia da Faculdade.</p>
-                            <a class="btn-projetos" target="_blank" href="https://github.com/DevWalissonMatheus/Trabalho-Site-Portifolio">
+                            <a class="btn-projetos" target="_blank"
+                                href="https://github.com/DevWalissonMatheus/Trabalho-Site-Portifolio">
                                 Ver Projeto</a>
                         </div>
                     </div>
@@ -171,20 +178,21 @@
             </div>
             </div>
         </section>
-        <section id="bottom-contato">
+        <section id="bottom-contato"> <!-- Sessão de Contato -->
             <div class="interface">
                 <h2 id="contato">CONTATO</h2>
                 <form action="">
                     <input class="inp-contato" placeholder="Nome">
                     <input class="inp-contato" name="" id="" placeholder="Email">
-                    <input class="inp-contato" name="" id="" placeholder="Número de Celular">
                     <textarea class="txt-mensagem" name="" id="" placeholder="Mensagem"></textarea>
+                    <!-- Placeholder inclui uma "frase invisível" que desaparece ao começar digitar --> 
                     <div class="btn-enviar"><input type="submit" value="Enviar"></div>
+                    <!-- Botão para enviar o conteúdo (Não fiz a configuração para enviar)-->
                 </form>
             </div>
         </section>
     </main>
-    <footer id="bottom-rodape">
+    <footer id="bottom-rodape"> <!-- Sessão de Rodapé -->
         <div class="interface">
             <div class="rodape">
                 <a class="footer-link" target="_blank" href="https://www.github.com/devwalissonmatheus">GitHub</a>
@@ -192,12 +200,14 @@
                     href="https://www.linkedin.com/in/walisson-matheus-384222233/">Linkedin</a>
                 <a class="footer-link" target="_blank"
                     href="https://wa.me/5599985047355?text=Entre%20em%20contato%20via%20WhatsApp">WhatsApp</a>
-                <p class="direitos">© Walisson Matheus 2023.</p>
+                    <!-- Links das Redes Sociais -->
+                <p class="direitos">© Walisson Matheus 2023.</p> <!-- Direitos Autorais -->
             </div>
         </div>
     </footer>
-    <script src="menu-responsivo.js"></script>
-    <script src="rolagem-suave.js"></script>
+    <!-- Scripts para chamar os arquivos Java Script -->
+    <script src="menu-responsivo.js"></script> <!-- Responsável pela barra lateral -->
+    <script src="rolagem-suave.js"></script>  <!--  Responsável pela rolagem suave no site -->
 </body>
 
 </html>
